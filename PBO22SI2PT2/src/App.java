@@ -12,7 +12,7 @@ public class App {
         System.out.println(cindy);
     }
     public static void init(){
-        Mahasiswa cindy = new Mahasiswa("Cindy C...", 
+        Mahasiswa cindy = new Mahasiswa("Cindy Chuwardi", 
         "030812121",
         "Jl. xxx no xx kota Medan",
         "Sistem Informasi");
