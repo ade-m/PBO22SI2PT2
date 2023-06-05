@@ -29,5 +29,6 @@ public class App {
         "Jl. xxx no xx kota Medan",
         "Sistem Informasi");
 
+
     }
 }
