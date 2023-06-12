@@ -5,6 +5,7 @@ public class App {
         String nilaiMatakuliah = "B+";
         System.out.println(namaMahasiswa + " " 
         + namaMatakuliah + " " + nilaiMatakuliah);
+        String studentID = "081121231321";
 
     }
 }
