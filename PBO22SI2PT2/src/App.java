@@ -4,14 +4,17 @@ import java.util.Scanner;
 public class App {
     public static ArrayList<Mahasiswa> mahasiswa = 
                 new ArrayList<Mahasiswa>();
+    public static ArrayList<Dosen> dosen = 
+                new ArrayList<Dosen>();
     public static void main(String[] args) throws Exception {
 
         init();
        //cetakDataMahasiswa();
-        int pilihan =2;
+        int pilihan =1;
         switch(pilihan){
             case 1:// input data
-                inputDataMhs();
+                //inputDataMhs();
+                inputDataDosen();
                 break;
             case 2:// delete data
                 hapusData(0);
@@ -24,6 +27,24 @@ public class App {
     }
     public static void hapusData(int i){
         mahasiswa.remove(i);
+    }
+     public static void inputDataDosen(){
+        Scanner input = new Scanner(System.in);
+        String nama="",NIDN="", prodi="",nik="";
+        System.out.print("Nama\t:");
+        if(input.hasNextLine())
+            nama = input.nextLine();
+        System.out.print("NIDN\t:");
+        if(input.hasNextLine())
+            NIDN = input.nextLine();
+        System.out.print("NIK Mahasiswa\t:");
+        if(input.hasNextLine())
+            nik = input.nextLine();
+       
+        dosen.add(new Dosen(NIDN, nama, mahasiswa));
+        System.out.println(dosen.get(0));
+        input.close();
+        System.out.println();
     }
     public static void inputDataMhs(){
         Scanner input = new Scanner(System.in);
@@ -75,8 +96,8 @@ public class App {
         "Jl. xxx no xx kota Medan",
         "Sistem Informasi"));
 
-        mahasiswa.remove(alfredo);
-        mahasiswa.remove(1);
+        // mahasiswa.remove(alfredo);
+        // mahasiswa.remove(1);
 
 
     }
