@@ -1,16 +1,17 @@
+import java.util.ArrayList;
+
 public class App {
+    public static ArrayList<Mahasiswa> mahasiswa = 
+                new ArrayList<Mahasiswa>();
     public static void main(String[] args) throws Exception {
 
         init();
-        Mahasiswa owen = new Mahasiswa();
-        System.out.println(owen);
-        owen = new Mahasiswa("Owen Felix", "Jl xx Medan");
-        System.out.println(owen);
-        Mahasiswa cindy = new Mahasiswa("Cindy C.", 
-                    "030812121",
-                    "Jl. xxx no xx kota Medan",
-                    "Sistem Informasi");
-        System.out.println(cindy);
+        cetakDataMahasiswa();
+    }
+    public static void cetakDataMahasiswa(){
+        for (Mahasiswa mahasiswa2 : mahasiswa) {
+            System.out.println(mahasiswa2);
+        }
     }
     public static void init(){
         Mahasiswa cindy = new Mahasiswa("Cindy Chuwardi", 
@@ -29,6 +30,13 @@ public class App {
         "030812121",
         "Jl. xxx no xx kota Medan",
         "Sistem Informasi");
+
+        mahasiswa.add(alfredo);
+        mahasiswa.add(nicholas);
+        mahasiswa.add(new Mahasiswa("Cindy Chuwardi", 
+        "030812121",
+        "Jl. xxx no xx kota Medan",
+        "Sistem Informasi"));
 
 
     }
